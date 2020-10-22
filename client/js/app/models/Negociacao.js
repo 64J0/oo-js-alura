@@ -2,7 +2,7 @@ class Negociacao {
   constructor(data, quantidade, valor) {
     // O underline indica que a variável
     // deve ser privada
-    this._data = new Date(data.getTime());
+    this._data = new Date(data);
     this._quantidade = quantidade;
     this._valor = valor;
     Object.freeze(this);
