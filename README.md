@@ -11,7 +11,8 @@ São abordados conceitos de:
 * Arquitetura MVC
 * Métodos estáticos
 * Template strings
-* Herança
+* Herança, para reutilizar código
+* Contexto léxico das arrow functions em contraposição ao contexto dinâmico das functions normais
 
 ---
 Vinícius Gajo Marques Oliveira, 2020
