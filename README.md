@@ -11,6 +11,7 @@ São abordados conceitos de:
 * Arquitetura MVC
 * Métodos estáticos
 * Template strings
+* Herança
 
 ---
 Vinícius Gajo Marques Oliveira, 2020
