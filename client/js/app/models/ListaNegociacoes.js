@@ -29,4 +29,12 @@ class ListaNegociacoes {
       }, 0);
     return String(vTotal);
   }
+
+  ordena(criterio) {
+    this._negociacoes.sort(criterio);
+  }
+
+  inverteOrdem() {
+    this._negociacoes.reverse();
+  }
 }
