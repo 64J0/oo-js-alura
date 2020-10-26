@@ -18,6 +18,7 @@ São abordados conceitos de:
 * Contexto léxico das arrow functions em contraposição ao contexto dinâmico das functions normais
   * Basicamente o valor de this é alterado dependendo de onde ele é criado. Caso seja em uma function normal seu valor é definido no momento em que a função é **chamada**, jamais no momento em que é declarada. Já com as arrow functions o valor de this será sempre referente ao contexto em que função é **declarada** e não no que ela é chamada.
 * Rest operator, que é bem parecido com o spread operator
+* Requisição Ajax com JS puro
 
 ## Técnicas para reutilizar código em classes
 
