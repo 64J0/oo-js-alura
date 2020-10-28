@@ -1,30 +1,49 @@
 # Tabela de transações - OO ES6
 
-Este projeto consiste em uma aplicação criada em javascript de uma tabela de transações financeiras. 
+Este projeto consiste em uma aplicação criada utilizando HTML, CSS e JavaScript de uma tabela de transações financeiras durante o curso de *OO* da **Alura** na trilha de **Front-end**. Este curso aborda a orientação a objetos observando as particularidades do JavaScript na versão *ES6*.
 
-O curso está disponível na plataforma da **Alura** na trilha de javascript, contemplando as novidades do ES6 e orientação a objetos.
+De maneira reduzida os conceitos mais importantes abordados são:
 
-O principal motivo para sua concepção é apresentar os conceitos de orientação a objetos com as particularidades do javascript com as novidades do ES6.
-
-São abordados conceitos de:
-
-* Convenção para variáveis privadas do javascript
+* Convenção para variáveis privadas do JavaScript, já que até essa versão ainda não existe uma maneira de criar esse tipo de variável em nossos objetos com uma sintaxe direta
 * Programação defensiva (evitando que um valor possa ser alterado em uma classe crítica do sistema)
-* Definição de propriedades getters 
-* Escopo de variáveis
-* Arquitetura MVC
-* Métodos estáticos
-* Template strings
-* Contexto léxico das arrow functions em contraposição ao contexto dinâmico das functions normais
-  * Basicamente o valor de this é alterado dependendo de onde ele é criado. Caso seja em uma function normal seu valor é definido no momento em que a função é **chamada**, jamais no momento em que é declarada. Já com as arrow functions o valor de this será sempre referente ao contexto em que função é **declarada** e não no que ela é chamada.
-* Rest operator, que é bem parecido com o spread operator
-* Requisição Ajax com JS puro
-* Promises
+* Definição de propriedades *getters* e *setters* de maneira simplificada em classes do JavaScript
+* Escopo de variáveis, e diferenças entre variáveis definidas com a palavra reservada *var* e *let*
+* Arquitetura MVC - Model, View e Controller
+  * View -> Lida com o que é exibido para o usuário na tela, por exemplo, a classe MensagemView controla se será mostrado um `<p>` ou não contendo informação sobre a operação realizada
+  * Model -> Representa o tipo de objeto que será manipulado (ou 'enxergado') pelo sistema
+  * Controller -> É a classe responsável por lidar com os models e as views de maneira organizada
+* Métodos estáticos, que são métodos de objetos que não requerem uma nova instância da classe para serem executados
+* Template strings para facilitar a composição de strings
+* Contexto léxico das *arrow functions* em contraposição ao contexto dinâmico das *functions* normais
+  * Basicamente o valor do parâmetro **this** é alterado dependendo de onde ele é criado. Caso seja em uma **function normal**, seu valor é definido no momento em que a função é **chamada**, jamais no momento em que é declarada. Já com as **arrow functions** o valor de **this** será sempre referente ao contexto em que função é **declarada** e não no que ela é chamada.
+* Rest operator, que é bem parecido com o spread operator porém aplicado no campo de parâmetros de uma função
+* Requisição Ajax com JS puro utilizando o objeto XMLHttpRequest
+* Promises e programação assíncrona
 
 ## Técnicas para reutilizar código em classes
 
-* Herança
+* Herança:
+
+Uma classe extende a outra, reaproveitando seu código anteriormente criado.
+
+```javascript
+class Pessoa {
+    constructor(nome, idade) {
+        this._nome = nome;
+        this._idade = idade;
+    }
+}
+
+class Funcionario extends Pessoa {
+    fala() {
+        return `Eu, ${this._nome} tenho ${this._idade} anos.`;
+    }
+}
+```
+
 * Composição:
+
+Uma classe aproveita alguma parte de uma determinada classe evitando ter que reescrever código.
 
 ```javascript
 class Aviao {
@@ -60,6 +79,8 @@ class Passarinho {
 ```
 
 * Mixin:
+
+Esse tipo é o mais confuso pois a API Reflect do JavaScript é confusa. Basicamente, com essa técnica é possível executar uma ação em uma classe considerando outro contexto passando um conjunto de parâmetros que são informados no terceiro argumento.
 
 ```javascript
 class Aviao {
@@ -130,13 +151,19 @@ let pessoaProxy = new Proxy(pessoa, {
 
 ### Factory
 
-Classes especializadas em criar determinado tipo de objeto.
-
-Ele é utilizado quando precisamos facilitar a criação de um objeto.
-
-É ideal quando queremos criar objetos similares, com apenas seus detalhes diferentes, que podemos passar nos argumentos da Factory.
+Classes especializadas em criar determinado tipo de objeto. É ideal quando queremos criar objetos similares, com apenas seus detalhes diferentes, que podemos passar nos argumentos da Factory.
 
 É bom para abstrair a criação de um objeto complexo, já que o programador que utilizar a Factory não precisa necessariamente saber como é feita esta operação.
+
+## Comentários finais
+
+Foi um curso rápido mas bastante rico em informações. A didática utilizada é excelente, com vários exercícios e textos complementares que ajudam no entendimento e fixação do conhecimento.
+
+Todavia, alguns conceitos podem ser melhor explorados, como os padrões de projeto.
+
+No mais achei bacana realizar esse treinamento pois abriu minha mente para novos conceitos e me fez relembrar alguns que já tinha estudado anteriormente em outras linguagens e agora tenho mais noção de como implementar utilizando o JavaScript.
+
+**Nota final: 9/10.**
 
 ---
 Vinícius Gajo Marques Oliveira, 2020

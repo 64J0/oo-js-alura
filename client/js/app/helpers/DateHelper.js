@@ -18,7 +18,8 @@ class DateHelper {
       ...texto
         .split('-')
         .map((item, indice) => {
-          return indice !== 1 ? item : (item - 1);
+          console.log(item, indice);
+          return indice != 1 ? item : (item - 1);
         })
     );
   }

@@ -2,6 +2,7 @@ class Negociacao {
   constructor(data, quantidade, valor) {
     // O underline indica que a variável
     // deve ser privada
+    console.log(data);
     this._data = new Date(data);
     this._quantidade = quantidade;
     this._valor = valor;
